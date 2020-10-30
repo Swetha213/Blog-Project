@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Contact Swetha</title>
+
+   <link rel="stylesheet" href="css/styles.css">
+
+
+   <link rel="shortcut icon" href="favicon.png">
+   <script type="text/javascript">
+      var imgsrc;
+      function load(event) {
+         imgsrc = URL.createObjectURL(event.target.files[0]);
+      }
+      function addPlace() {
+         var container = document.getElementById("container");
+         var inp = document.getElementById("thead");
+         var desc = document.getElementById("tdesc");
+         var div = document.createElement("div");
+         var text = document.createElement("h1");
+         var tdesc = document.createElement("p");
+         var img = document.createElement("img");
+         text.innerHTML = inp.value;
+         tdesc.innerHTML = desc.value;
+         img.src = imgsrc;
+         div.appendChild(text);
+         div.appendChild(tdesc);
+         div.appendChild(img);
+         text.classList.add("top");
+         tdesc.classList.add("matter");
+         img.classList.add("image");
+         div.classList.add("place");
+         container.appendChild(div);
+      }
+   </script>
+  <style>
+     body{
+        background-color: lightpink;
+     }
+     .style_one{
+            background-color: rgb(3, 0, 0);
+            padding: 15px;
+            margin-left: -60px;
+        }
+  </style>
+</head>
+<body>
+   <header id="home">
+      <nav id="nav-wrap">
+          <ul id="nav" class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li class="current"><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </nav>
+  </header>
+
+     <h1>
+      <div style = "margin-top: 100px; font-size:x-large; text-align: center; color: darkblue; font-family: cursive;">
+        Places I visited in USA
+      </div>
+   </h1> 
+
+   <div class="inputt">
+      <label>Title:</label>
+      <input type="text" id="thead" placeholder="Enter Title here..."/>
+      <label>Description:</label>
+      <textarea id="tdesc" rows="4" cols="50" placeholder="Enter description here..."></textarea>
+      <label>Image:</label>
+      <input type="file" id="tfile" onchange="load(event)" accept=".jpg, .jpeg, .png"/>
+      <button onclick="addPlace()">Submit</button>
+   </div>
+
+   <div id="container">
+
+      <div class="place">
+         <h1 class="top">South Beach, Miami Florida</h1>
+         <p class="matter">No matter what this beach will be special to me,
+            As this is the first beach I visted in USA.
+            I always wanted to vist miami as I am very fond of beaches.
+            And I recommend this beach as a must vist escpecially to all the beach lovers like me.
+            If you want you can also try beach activities like parasailing and jet ski.</p>
+         <img class="image" src="images/places/southbeach.jpg" alt=""/>
+      </div>
+
+      <div class="place">
+         <h1 class="top">Chicago, Illinois</h1>
+         <p class="matter">If anyone asks me which place is close to your heart in USA,
+            I would say Chicago, because this is the first city I ever visted in USA,
+            and this is the first city I went to with love of my life and I cherish that forever.
+            Apart from everything I would recommend everyone to visit once in their lives.
+            It is very beautiful and it has the second largest downtown in USA.</p>
+         <img class="image" src="images/places/chicago.jpg" alt=""/>
+      </div>
+
+      <div class="place">
+         <h1 class="top">Universal Studios, Orlando, Florida</h1>
+         <p class="matter">I am the type of person who is a kid at heart and still fond of all the cartoon stuff.
+            This the place where you can enjoy every single ride and will get chance to do some adventurous stuff.
+            I personally loved the Hulk,Minion and Harry potter rides and enjoyed them to the fullest.
+            I recommend this place to all the people not only kids even adults will enjoy this park and will have a great time.</p>
+         <img class="image" src="images/places/universal.jpg" alt=""/>
+      </div>
+      
+      <div class="place">
+         <h1 class="top">Rocky Mountain National Park, Colorado</h1>
+         <p class="matter">If you are a type of person who loves to hike even in winters,
+            then you must visit this place which is located in colorado and it leaves you with 
+            breathtaking view and best place with adventures for hiking.
+            But one thing for sure make sure you are ready for the extremely lower temperture with 
+            all the gadgets that are necessary for you to keep you warm.</p>
+         <img class="image" src="images/places/rockymountains.jpg" alt=""/>
+      </div>
+
+      <div class="place">
+         <h1 class="top">Smoky Mountains, Tennessee</h1>
+         <p class="matter">If you are a type of person who are fond of colors. 
+            Then please make a vist to this during fall time in USA and you can enjoy and the view and place with beautiful fall colors around you.
+            If you have enough time try to take a train ride around the moutains and enjoy the view.</p>
+         <img class="image" src="images/places/smoky.jpg" alt=""/>
+      </div>
+
+   </div>
+
+   <div id="cont">
+
+   </div>
+
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
